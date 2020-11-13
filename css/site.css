@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 .cursive {
 	font-family: 'Parisienne', san-serif;
@@ -7,6 +8,10 @@
 
 .typewriter {
 	font-family: 'Special Elite', cursive;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
 }
 
 /* Colour Palatte */
@@ -36,8 +41,26 @@
 }
 
 html {
-	
+  scroll-behavior: smooth;
 }
+
+em {
+  font-style: normal;
+  font-weight: bold;
+
+}
+
+/* Page anchors
+   ========================================================================== */
+
+#our-wedding, #the-location, #rsvp {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+
 
 /* Header/nav stuff 
    ========================================================================== */
@@ -49,8 +72,9 @@ html {
 .hero {
 	height:600px;
 	width: 100%;
-	background-image: url(/jk90001/img/A111628-R1-00-24A.JPG);
-	background-position: top;
+	/* background-image: url(/jk90001/img/A111628-R1-00-24A.JPG); */
+	background-image: url(../img/A111628-R1-00-24A.JPG);
+  background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -86,7 +110,7 @@ nav {
 
 .btn-outline {
 	margin-top: -6px !important;
-	border: 1px solid;
+	border: 1px solid #fff !important;
 	background: none !important;
 }
 
