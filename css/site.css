@@ -1,20 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-.cursive {
-	font-family: 'Parisienne', san-serif;
-}
 
-.typewriter {
-	font-family: 'Special Elite', cursive;
-}
+/* Fonts and colours 
+   ========================================================================== */
 
 .playfair {
   font-family: 'Playfair Display', serif;
 }
 
-/* Colour Palatte */
 .champagne {
 	background-color: #DBBAA7 !important;
 	color: #393738 !important;
@@ -40,14 +34,51 @@
 	float: none !important;
 }
 
+
+/* Layout stuff
+   ========================================================================== */
+
 html {
   scroll-behavior: smooth;
+  padding: none;
+  margin: none;
 }
 
 em {
   font-style: normal;
   font-weight: bold;
 
+}
+
+.shadow {
+  box-shadow: inset 0px 3px 3px rgba(0,0,0,0.2), inset 0px -3px 3px rgba(0,0,0,0.2);
+}
+
+.socials h5 {
+  padding: 20px 0;
+}
+
+.last-row {
+  margin: 0 !important;
+}
+
+footer {
+  background: #333 !important;
+  overflow: hidden;
+  padding: 20px 0;
+
+}
+
+footer p {
+  background: #333 !important;
+  padding: 0;
+  margin: 0;
+  color: rgb(150, 150, 150);
+}
+
+.thankyou {
+  padding-top: 50px;
+  height: 200px;
 }
 
 /* Page anchors
@@ -60,8 +91,6 @@ em {
   visibility: hidden;
 }
 
-
-
 /* Header/nav stuff 
    ========================================================================== */
 
@@ -73,7 +102,7 @@ em {
 	height:600px;
 	width: 100%;
 	/* background-image: url(/jk90001/img/A111628-R1-00-24A.JPG); */
-	background-image: url(../img/A111628-R1-00-24A.JPG);
+	background-image: url(../img/hero.jpg);
   background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -92,7 +121,7 @@ em {
 
 nav {
 	height: 100px;
-	background: rgba(0,0,0,0.33);
+	background: rgba(0,0,0,0.50);
 	webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
@@ -114,8 +143,14 @@ nav {
 	background: none !important;
 }
 
-/* RSVP Form colours */
+   
+/* Form Inputs
+   ========================================================================== */
   /* label color */
+input {
+  color: #fff;
+}
+
    .input-field label {
      color: #fff !important;
    }
@@ -345,6 +380,18 @@ nav {
   border-color: #949494;
 }
   
+/* Radio Buttons
+   ========================================================================== */
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+  background-color: #BC5B31;
+  border: 2px solid #BC5B31;
+}
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
+  border: 2px solid #BC5B31;
+}
+
+
  @media only screen and (max-width: 601px) {
 	 .brand-logo {
 		 font-size: 1.64rem !important;
