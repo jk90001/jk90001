@@ -17,3 +17,30 @@ window.onscroll = function() {myFunction()};
 }
 
 
+/********************** RSVP **********************/
+$('#rsvp-form').on('submit', function (e) {
+  e.preventDefault();
+  var data = $(this).serialize();
+
+  $('#alert-wrapper').html(alert_markup('champagne', '<strong>Just a sec!</strong> We are saving your details.'));
+
+  $.post('https://script.google.com/macros/s/AKfycbwMs_cm6WT8K-KG8LIsVJKYXIGTs-2P2uB-2JtgxELjQXMwE1rO/exec', data)
+      .done(function (data) {
+          console.log(data);
+          if (data.result === "error") {
+              $('#alert-wrapper').html(alert_markup('mulledwine', data.message));
+          } else {
+            $('#alert-wrapper').html(alert_markup('autumn', '<strong>Thank you!</strong> We have received your RSVP.'));
+          }
+      })
+      .fail(function (data) {
+          console.log(data);
+          $('#alert-wrapper').html(alert_markup('mulledwine', '<strong>Sorry!</strong> There is some issue with the server. Please try again later or contact us to RSVP.'));
+      });
+}); 
+
+// alert_markup
+function alert_markup(colour, msg) {
+  // return '<div class="alert" role="alert">' + msg + '</div>';
+  return '<p class="form-result ">' + msg +'</p>';
+}

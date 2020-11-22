@@ -81,6 +81,10 @@ footer p {
   height: 200px;
 }
 
+.alert {
+  padding: 20px 0;
+}
+
 /* Page anchors
    ========================================================================== */
 
@@ -178,6 +182,8 @@ input {
      color: #fff !important;
    }
    
+
+
    
 /* Checkboxes
    ========================================================================== */
@@ -389,6 +395,14 @@ input {
 }
 [type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
   border: 2px solid #BC5B31;
+}
+
+
+/* Results
+   ========================================================================== */
+.form-result {
+  padding: 10px 20px;
+  margin: 20px 0;
 }
 
 
