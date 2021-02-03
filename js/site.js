@@ -24,7 +24,7 @@ $('#rsvp-form').on('submit', function (e) {
 
   $('#alert-wrapper').html(alert_markup('champagne', '<strong>Just a sec!</strong> We are saving your details.'));
 
-  $.post('https://script.google.com/macros/s/AKfycbwMs_cm6WT8K-KG8LIsVJKYXIGTs-2P2uB-2JtgxELjQXMwE1rO/exec', data)
+  $.post('https://script.google.com/macros/s/AKfycbwEQrW8TN69i0XeVSZxV9g2WT3UjaOm9VQ4kCpdzXXOdvJT7KCFqT5naA/exec', data)
       .done(function (data) {
           console.log(data);
           if (data.result === "error") {
